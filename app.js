@@ -10,9 +10,9 @@ let dir = './';
 
 fs.readdir(dir, (err, data) => {
      // console.log(data);
-      const doubles = data.map((num) =>
-            fs.readFile(dir + num, 'utf-8', (err, data) => {
-                  if (path.extname(num) == '.txt') {
+      data.map((file) =>
+            fs.readFile(dir + file, 'utf-8', (err, data) => {
+                  if (path.extname(file) == '.txt') {
                         console.log(data)
                   };
             })
